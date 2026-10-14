@@ -1,0 +1,112 @@
+<section class="page achievements-page">
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div class="eyebrow">
+      {{ eyebrow() }}
+    </div>
+
+    <h1>
+      {{ heading() }}
+    </h1>
+
+    <p>
+      {{ intro() }}
+    </p>
+
+  </header>
+
+
+  <!-- ACHIEVEMENTS GRID -->
+  <section class="achievements-grid">
+
+    @for (college of colleges(); track college.name + college.rank + college.image) {
+
+    <article class="achievement-card">
+
+      <!-- IMAGE -->
+      <div class="image-container">
+
+        <img [src]="college.image" [alt]="college.name" loading="lazy" />
+
+        <div class="rank">
+          {{ college.rank }}
+        </div>
+
+      </div>
+
+
+      <!-- CONTENT -->
+      <div class="card-content">
+
+        <!-- LOCATION -->
+        <div class="tag">
+          {{ college.location }}
+        </div>
+
+
+        <!-- COLLEGE NAME -->
+        <h3>
+          {{ college.name }}
+        </h3>
+
+
+        <!-- DESCRIPTION -->
+        <p class="description">
+          {{ college.description }}
+        </p>
+
+
+        <!-- ACHIEVEMENT -->
+        <div class="info-section">
+
+          <div class="info-title">
+
+            <span class="info-icon achievement-icon" aria-hidden="true">
+              ★
+            </span>
+
+            <span>
+              Achievement
+            </span>
+
+          </div>
+
+          <p>
+            {{ college.achievement }}
+          </p>
+
+        </div>
+
+
+        <!-- RESEARCH -->
+        <div class="info-section research-section">
+
+          <div class="info-title">
+
+            <span class="info-icon research-icon" aria-hidden="true">
+              ⌘
+            </span>
+
+            <span>
+              Research
+            </span>
+
+          </div>
+
+          <p>
+            {{ college.research }}
+          </p>
+
+        </div>
+
+      </div>
+
+    </article>
+
+    }
+
+  </section>
+
+</section>

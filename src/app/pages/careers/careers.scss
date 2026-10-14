@@ -1,0 +1,693 @@
+/* =========================================================
+   CAREERS PAGE
+   ========================================================= */
+
+:host {
+  display: block;
+  width: 100%;
+
+  background: var(--paper);
+
+  font-family:
+    "Times New Roman",
+    Times,
+    serif;
+}
+
+
+/* =========================================================
+   CAREER GRID
+   ========================================================= */
+
+.career-container {
+  width: 100%;
+  max-width: 1240px;
+
+  margin: 0 auto;
+
+  padding: 30px 30px 70px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 28px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   CAREER CARD
+   ========================================================= */
+
+.career-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 365px;
+
+  padding: 26px;
+
+  background: var(--card);
+
+  border: 1px solid var(--line);
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.05);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* =========================================================
+   GREEN SIDE ACCENT
+   ========================================================= */
+
+.career-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 4px;
+
+  background: var(--green);
+
+  opacity: 0;
+
+  transition: opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   CAREER CARD HOVER
+   ========================================================= */
+
+.career-card:hover {
+  transform: translateY(-6px);
+
+  border-color: transparent;
+
+  box-shadow:
+    0 14px 32px rgba(61, 26, 120, 0.12);
+}
+
+.career-card:hover::before {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.career-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   JOB ICON
+   ========================================================= */
+
+.job-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: var(--tag-purple);
+
+  border-radius: 10px;
+
+  font-size: 22px;
+}
+
+
+/* =========================================================
+   JOB TYPE
+   ========================================================= */
+
+.job-type {
+  display: inline-block;
+
+  max-width: 100%;
+
+  padding: 6px 12px;
+
+  background: var(--green-light);
+
+  color: #27833b;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.career-content {
+  flex: 1;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   JOB TITLE
+   ========================================================= */
+
+.career-content h3 {
+  margin: 0 0 16px;
+
+  color: var(--purple-deep);
+
+  font-size: 21px;
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   JOB META
+   ========================================================= */
+
+.job-meta {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin-bottom: 18px;
+
+  color: var(--muted);
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+.job-meta span {
+  display: block;
+}
+
+
+/* =========================================================
+   JOB DESCRIPTION
+   ========================================================= */
+
+.description {
+  margin: 0 0 20px;
+
+  color: var(--muted-dark);
+
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1.7;
+
+  text-align: justify;
+}
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.skills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: auto;
+  padding-top: 5px;
+}
+
+.skill {
+  display: inline-block;
+
+  max-width: 100%;
+
+  padding: 6px 10px;
+
+  background: #f5f3f9;
+
+  border: 1px solid #e3dfeb;
+
+  border-radius: 6px;
+
+  color: #403b4b;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   CAREER CTA
+   ========================================================= */
+
+.career-cta {
+  width: calc(100% - 40px);
+  max-width: 900px;
+
+  margin: 0 auto 60px;
+
+  padding: 38px 25px;
+
+  text-align: center;
+
+  background: var(--card);
+
+  border: 1px solid var(--line);
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================================
+   CTA TITLE
+   ========================================================= */
+
+.career-cta h2 {
+  margin: 0 0 12px;
+
+  color: var(--purple);
+
+  font-size: 28px;
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   CTA TEXT
+   ========================================================= */
+
+.career-cta p {
+  margin: 0 0 8px;
+
+  color: var(--muted);
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   CTA EMAIL
+   ========================================================= */
+
+.career-cta a {
+  color: var(--purple);
+
+  font-size: 18px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  overflow-wrap: anywhere;
+
+  transition: color 0.2s ease;
+}
+
+.career-cta a:hover {
+  color: var(--green);
+
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1600px) {
+
+  .career-container {
+    max-width: 1400px;
+
+    gap: 32px;
+  }
+
+  .career-card {
+    min-height: 390px;
+
+    padding: 30px;
+  }
+
+  .career-content h3 {
+    font-size: 23px;
+  }
+
+  .description {
+    font-size: 17px;
+  }
+
+  .skill {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1366px) and (min-width: 1025px) {
+
+  .career-container {
+    max-width: 1150px;
+
+    padding: 25px 25px 60px;
+
+    gap: 22px;
+  }
+
+  .career-card {
+    min-height: 350px;
+
+    padding: 23px;
+  }
+
+  .career-content h3 {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .skill {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) and (min-width: 769px) {
+
+  .career-container {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    padding: 25px 25px 55px;
+
+    gap: 22px;
+  }
+
+  .career-card {
+    min-height: 360px;
+
+    padding: 24px;
+  }
+
+  .career-content h3 {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 850px) and (min-width: 769px) {
+
+  .career-container {
+    gap: 20px;
+  }
+
+  .career-card {
+    padding: 22px;
+  }
+
+  .career-content h3 {
+    font-size: 19px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .career-container {
+    grid-template-columns: 1fr;
+
+    padding: 20px 18px 40px;
+
+    gap: 18px;
+  }
+
+  .career-card {
+    min-height: auto;
+
+    padding: 22px;
+
+    border-radius: 11px;
+  }
+
+  .career-card-top {
+    margin-bottom: 19px;
+  }
+
+  .job-icon {
+    width: 44px;
+    height: 44px;
+
+    font-size: 20px;
+  }
+
+  .job-type {
+    padding: 5px 10px;
+
+    font-size: 12px;
+  }
+
+  .career-content h3 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .job-meta {
+    font-size: 14px;
+  }
+
+  .description {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .skills {
+    gap: 6px;
+  }
+
+  .skill {
+    padding: 5px 8px;
+
+    font-size: 12px;
+  }
+
+  .career-cta {
+    width: calc(100% - 36px);
+
+    margin-bottom: 40px;
+
+    padding: 30px 18px;
+  }
+
+  .career-cta h2 {
+    font-size: 24px;
+  }
+
+  .career-cta p {
+    font-size: 15px;
+  }
+
+  .career-cta a {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .career-container {
+    padding: 18px 15px 35px;
+
+    gap: 16px;
+  }
+
+  .career-card {
+    padding: 20px;
+
+    border-radius: 10px;
+  }
+
+  .career-card-top {
+    margin-bottom: 17px;
+  }
+
+  .job-icon {
+    width: 42px;
+    height: 42px;
+
+    font-size: 19px;
+  }
+
+  .job-type {
+    padding: 5px 9px;
+
+    font-size: 11px;
+  }
+
+  .career-content h3 {
+    font-size: 19px;
+  }
+
+  .job-meta {
+    gap: 7px;
+
+    font-size: 13.5px;
+  }
+
+  .description {
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+
+  .skills {
+    gap: 6px;
+  }
+
+  .skill {
+    padding: 5px 8px;
+
+    font-size: 11.5px;
+  }
+
+  .career-cta {
+    width: calc(100% - 30px);
+
+    margin-bottom: 32px;
+
+    padding: 27px 15px;
+  }
+
+  .career-cta h2 {
+    font-size: 22px;
+  }
+
+  .career-cta p {
+    font-size: 14px;
+  }
+
+  .career-cta a {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .career-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .career-card {
+    padding: 18px;
+  }
+
+  .career-content h3 {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .career-cta {
+    width: calc(100% - 24px);
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .career-card,
+  .career-card::before,
+  .career-cta a {
+    transition: none;
+  }
+}

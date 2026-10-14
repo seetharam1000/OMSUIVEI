@@ -1,0 +1,100 @@
+<section class="hero">
+
+  <div class="eyebrow">
+    {{ eyebrow() }}
+  </div>
+
+  <h1>
+    {{ heading() }}
+  </h1>
+
+  <p>
+    {{ intro() }}
+  </p>
+
+</section>
+
+
+<section class="career-container">
+
+  @for (career of careers(); track career.title) {
+
+  <article class="career-card">
+
+    <div class="career-card-top">
+
+      <div class="job-icon" aria-hidden="true">
+        💼
+      </div>
+
+      <span class="job-type">
+        {{ career.type }}
+      </span>
+
+    </div>
+
+
+    <div class="career-content">
+
+      <h3>
+        {{ career.title }}
+      </h3>
+
+
+      <div class="job-meta">
+
+        <span>
+          📍 {{ career.location }}
+        </span>
+
+        <span>
+          🕒 {{ career.experience }}
+        </span>
+
+      </div>
+
+
+      <p class="description">
+        {{ career.description }}
+      </p>
+
+
+      <div class="skills">
+
+        @for (
+        skill of career.skills.split(', ');
+        track skill
+        ) {
+
+        <span class="skill">
+          {{ skill }}
+        </span>
+
+        }
+
+      </div>
+
+    </div>
+
+  </article>
+
+  }
+
+</section>
+
+
+<section class="career-cta">
+
+  <h2>
+    Interested in joining us?
+  </h2>
+
+  <p>
+    Please send your resume to
+  </p>
+
+  <a href="mailto:info@veitechnologies.in">
+    info@veitechnologies.in
+  </a>
+
+</section>

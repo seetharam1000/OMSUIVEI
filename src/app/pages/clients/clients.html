@@ -1,0 +1,71 @@
+<section class="page clients-page">
+
+  <div class="container">
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="hero">
+
+      <div class="eyebrow">
+        {{ eyebrow() }}
+      </div>
+
+      <h1>
+        {{ heading() }}
+      </h1>
+
+      <p>
+        {{ intro() }}
+      </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         CLIENT / COLLEGE GRID
+         ===================================================== -->
+
+    <section class="clients-section">
+
+      <div class="clients-grid">
+
+        @for (college of colleges(); track college.name) {
+
+        <article class="client-card">
+
+          <!-- RANK -->
+          <div class="rank">
+            {{ college.rank }}
+          </div>
+
+
+          <!-- LOCATION -->
+          <div class="location-tag">
+            {{ college.location }}
+          </div>
+
+
+          <!-- COLLEGE NAME -->
+          <h2>
+            {{ college.name }}
+          </h2>
+
+
+          <!-- DESCRIPTION -->
+          <p>
+            {{ college.description }}
+          </p>
+
+        </article>
+
+        }
+
+      </div>
+
+    </section>
+
+  </div>
+
+</section>

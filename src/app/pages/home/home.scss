@@ -1,0 +1,837 @@
+/* =========================================================
+HOST
+========================================================= */
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+/* =========================================================
+MAIN CONTAINER
+========================================================= */
+
+.parentSch {
+  width: 100%;
+  min-width: 0;
+
+  overflow-x: hidden;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+HERO IMAGE SECTION
+========================================================= */
+
+.imageDivSch {
+  position: relative;
+
+  width: 100%;
+
+  height: min(720px, calc(100vh - 96px));
+
+  min-height: 420px;
+
+  overflow: hidden;
+
+  background: #eeeeee;
+}
+
+/* =========================================================
+HERO IMAGE
+========================================================= */
+
+.bgImageSch {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+
+  object-fit: cover;
+
+  object-position: center center;
+}
+
+/* =========================================================
+NEWS / ANNOUNCEMENT BAR
+========================================================= */
+
+.newsSch {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  z-index: 5;
+
+  width: 100%;
+
+  min-height: 40px;
+
+  padding: 8px 0;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+MARQUEE WRAPPER
+========================================================= */
+
+.marqueeWrap {
+  width: 100%;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+MARQUEE CONTENT
+========================================================= */
+
+.marqueeInner {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding-left: 100%;
+
+  white-space: nowrap;
+
+  animation: scrollText 18s linear infinite;
+
+  will-change: transform;
+}
+
+/* =========================================================
+NEWS ICON
+========================================================= */
+
+.newsIconSch {
+  width: 21px;
+  height: 21px;
+
+  max-width: none;
+
+  flex: 0 0 auto;
+
+  object-fit: contain;
+}
+
+/* =========================================================
+NEWS TEXT
+========================================================= */
+
+.marqueeText {
+  display: inline-block;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 400;
+
+  line-height: 1.4;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+NEWS ANIMATION
+========================================================= */
+
+@keyframes scrollText {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+
+}
+
+/* =========================================================
+INFORMATION SECTION
+========================================================= */
+
+.infoSch {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 60px 30px 70px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+/* =========================================================
+SECTION TITLE
+========================================================= */
+
+.centerTitleSch {
+  margin: 0 0 26px;
+
+  color: #3c1e6e;
+
+  font-size: 34px;
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  letter-spacing: 0.2px;
+
+  text-align: center;
+}
+
+/* =========================================================
+INTRODUCTION
+========================================================= */
+
+.justifySch {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto 50px;
+
+  color: #555566;
+
+  font-size: 19px;
+  font-weight: 400;
+
+  line-height: 1.85;
+
+  text-align: justify;
+
+  overflow-wrap: break-word;
+}
+
+/* =========================================================
+RESEARCH GRID
+========================================================= */
+
+.researchGrid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 28px;
+
+  text-align: left;
+}
+
+/* =========================================================
+RESEARCH CARD
+========================================================= */
+
+.researchCard {
+  width: 100%;
+  min-width: 0;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e5ec;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* =========================================================
+CARD HOVER
+========================================================= */
+
+.researchCard:hover {
+  transform: translateY(-5px);
+
+  border-color: #d8d1e5;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+CARD CONTENT
+========================================================= */
+
+.researchCardContent {
+  width: 100%;
+  min-width: 0;
+}
+
+/* =========================================================
+CARD TITLE
+========================================================= */
+
+.researchCard h3 {
+  margin: 0 0 16px;
+
+  color: #3c1e6e;
+
+  font-size: 22px;
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  text-align: left;
+
+  overflow-wrap: break-word;
+}
+
+/* =========================================================
+CARD DESCRIPTION
+========================================================= */
+
+.researchCard p {
+  margin: 0;
+
+  color: #555566;
+
+  font-size: 17px;
+  font-weight: 400;
+
+  line-height: 1.8;
+
+  text-align: justify;
+
+  overflow-wrap: break-word;
+}
+
+/* =========================================================
+LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1600px) {
+
+  .imageDivSch {
+    height: min(800px, calc(100vh - 96px));
+  }
+
+  .infoSch {
+    max-width: 1300px;
+
+
+    padding-top: 70px;
+
+
+  }
+
+  .centerTitleSch {
+    font-size: 36px;
+  }
+
+  .justifySch {
+    max-width: 1050px;
+
+
+    font-size: 20px;
+
+
+  }
+
+  .researchGrid {
+    gap: 30px;
+  }
+
+  .researchCard {
+    padding: 32px;
+  }
+
+  .researchCard h3 {
+    font-size: 23px;
+  }
+
+  .researchCard p {
+    font-size: 18px;
+  }
+
+}
+
+/* =========================================================
+LAPTOP
+========================================================= */
+
+@media (max-width: 1366px) and (min-width: 1025px) {
+
+  .imageDivSch {
+    height: min(650px, calc(100vh - 96px));
+
+
+    min-height: 420px;
+
+
+  }
+
+  .infoSch {
+    max-width: 1150px;
+
+
+    padding: 55px 30px 65px;
+
+
+  }
+
+  .centerTitleSch {
+    font-size: 32px;
+  }
+
+  .justifySch {
+    max-width: 950px;
+
+
+    font-size: 18px;
+
+
+  }
+
+  .researchCard {
+    padding: 26px;
+  }
+
+  .researchCard h3 {
+    font-size: 20px;
+  }
+
+  .researchCard p {
+    font-size: 16px;
+
+
+    line-height: 1.75;
+
+
+  }
+
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .imageDivSch {
+    height: 560px;
+
+
+    min-height: 380px;
+
+
+  }
+
+  .infoSch {
+    max-width: 100%;
+
+
+    padding: 50px 25px 60px;
+
+
+  }
+
+  .centerTitleSch {
+    font-size: 30px;
+  }
+
+  .justifySch {
+    max-width: 850px;
+
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+
+  }
+
+  .researchGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+
+    gap: 22px;
+
+
+  }
+
+  .researchCard {
+    padding: 25px;
+  }
+
+  .researchCard h3 {
+    font-size: 20px;
+  }
+
+  .researchCard p {
+    font-size: 16px;
+
+
+    line-height: 1.75;
+
+
+  }
+
+}
+
+/* =========================================================
+SMALL TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .imageDivSch {
+    height: 480px;
+
+
+    min-height: 350px;
+
+
+  }
+
+  .researchGrid {
+    grid-template-columns: 1fr;
+
+
+    gap: 20px;
+
+
+  }
+
+  .researchCard {
+    width: 100%;
+  }
+
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* HERO */
+
+  .imageDivSch {
+    width: 100%;
+
+
+    height: 58vw;
+
+    min-height: 260px;
+    max-height: 450px;
+
+
+  }
+
+  .bgImageSch {
+    object-position: center center;
+  }
+
+  /* NEWS */
+
+  .newsSch {
+    min-height: 36px;
+
+
+    padding: 7px 0;
+
+
+  }
+
+  .newsIconSch {
+    width: 18px;
+    height: 18px;
+  }
+
+  .marqueeInner {
+    gap: 8px;
+
+
+    animation-duration: 16s;
+
+
+  }
+
+  .marqueeText {
+    font-size: 15px;
+  }
+
+  /* INFORMATION */
+
+  .infoSch {
+    width: 100%;
+
+
+    padding: 42px 20px 50px;
+
+
+  }
+
+  .centerTitleSch {
+    margin-bottom: 22px;
+
+
+    font-size: 26px;
+
+    line-height: 1.4;
+
+
+  }
+
+  .justifySch {
+    margin-bottom: 36px;
+
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    text-align: justify;
+
+
+  }
+
+  /* RESEARCH */
+
+  .researchGrid {
+    grid-template-columns: 1fr;
+
+
+    gap: 18px;
+
+
+  }
+
+  .researchCard {
+    padding: 23px;
+
+
+    border-radius: 10px;
+
+
+  }
+
+  .researchCard h3 {
+    margin-bottom: 12px;
+
+
+    font-size: 20px;
+
+    line-height: 1.45;
+
+
+  }
+
+  .researchCard p {
+    font-size: 15px;
+
+
+    line-height: 1.75;
+
+
+  }
+
+}
+
+/* =========================================================
+SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  /* HERO */
+
+  .imageDivSch {
+    height: 60vw;
+
+
+    min-height: 230px;
+    max-height: 340px;
+
+
+  }
+
+  /* NEWS */
+
+  .newsSch {
+    min-height: 33px;
+
+
+    padding: 6px 0;
+
+
+  }
+
+  .newsIconSch {
+    width: 16px;
+    height: 16px;
+  }
+
+  .marqueeInner {
+    gap: 7px;
+
+
+    animation-duration: 14s;
+
+
+  }
+
+  .marqueeText {
+    font-size: 14px;
+  }
+
+  /* INFORMATION */
+
+  .infoSch {
+    width: 100%;
+
+
+    padding: 34px 16px 44px;
+
+
+  }
+
+  .centerTitleSch {
+    margin-bottom: 20px;
+
+
+    font-size: 23px;
+
+    line-height: 1.4;
+
+
+  }
+
+  .justifySch {
+    margin-bottom: 30px;
+
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    text-align: justify;
+
+
+  }
+
+  /* RESEARCH */
+
+  .researchGrid {
+    gap: 16px;
+  }
+
+  .researchCard {
+    padding: 20px;
+
+
+    border-radius: 9px;
+
+
+  }
+
+  .researchCard h3 {
+    margin-bottom: 11px;
+
+
+    font-size: 19px;
+
+
+  }
+
+  .researchCard p {
+    font-size: 15px;
+
+
+    line-height: 1.75;
+
+
+  }
+
+}
+
+/* =========================================================
+VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .imageDivSch {
+    min-height: 210px;
+  }
+
+  .infoSch {
+    padding: 30px 14px 40px;
+  }
+
+  .centerTitleSch {
+    font-size: 21px;
+  }
+
+  .justifySch {
+    font-size: 14px;
+
+
+    line-height: 1.75;
+
+
+  }
+
+  .researchCard {
+    padding: 18px;
+  }
+
+  .researchCard h3 {
+    font-size: 18px;
+  }
+
+  .researchCard p {
+    font-size: 14px;
+
+
+    line-height: 1.75;
+
+
+  }
+
+}
+
+/* =========================================================
+REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .marqueeInner {
+    animation: none;
+
+
+    padding-left: 0;
+
+
+  }
+
+  .researchCard {
+    transition: none;
+  }
+
+}

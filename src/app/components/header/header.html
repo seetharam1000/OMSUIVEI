@@ -1,0 +1,234 @@
+<header class="main-header">
+
+  <!-- =====================================================
+       MAIN HEADER
+       ===================================================== -->
+
+  <div class="header-container">
+
+
+    <!-- ===================================================
+         LOGO
+         =================================================== -->
+
+    <a
+      class="logo-container"
+      routerLink="/home"
+      aria-label="VEI Technologies Home">
+
+      <img
+        src="assets/images/vei_logo.png"
+        alt="VEI Technologies"
+        class="vei-logo"
+      >
+
+    </a>
+
+
+    <!-- ===================================================
+         DESKTOP / TABLET NAVIGATION
+         =================================================== -->
+
+    <nav
+      class="main-navigation"
+      aria-label="Main navigation">
+
+
+      <!-- HOME -->
+
+      <a
+        mat-button
+        routerLink="/home"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-button">
+
+        Home
+
+      </a>
+
+
+      <!-- PRODUCTS -->
+
+      <a
+        mat-button
+        routerLink="/products"
+        routerLinkActive="active"
+        class="nav-button">
+
+        Products
+
+      </a>
+
+
+      <!-- CLIENTS -->
+
+      <a
+        mat-button
+        routerLink="/clients"
+        routerLinkActive="active"
+        class="nav-button">
+
+        Clients
+
+      </a>
+
+
+      <!-- ACHIEVEMENTS -->
+
+      <a
+        mat-button
+        routerLink="/achievements"
+        routerLinkActive="active"
+        class="nav-button">
+
+        Achievements
+
+      </a>
+
+
+      <!-- CAREERS -->
+
+      <a
+        mat-button
+        routerLink="/careers"
+        routerLinkActive="active"
+        class="nav-button">
+
+        Careers
+
+      </a>
+
+
+      <!-- CONTACT -->
+
+      <a
+        mat-button
+        routerLink="/contact"
+        routerLinkActive="active"
+        class="nav-button">
+
+        Contact
+
+      </a>
+
+    </nav>
+
+
+    <!-- ===================================================
+         MOBILE MENU BUTTON
+         =================================================== -->
+
+    <button
+      type="button"
+      class="mobile-menu-button"
+      (click)="toggleMobileMenu()"
+      [attr.aria-expanded]="mobileMenuOpen"
+      aria-label="Toggle navigation menu">
+
+      <mat-icon>
+        {{ mobileMenuOpen ? 'close' : 'menu' }}
+      </mat-icon>
+
+    </button>
+
+  </div>
+
+
+  <!-- =====================================================
+       MOBILE NAVIGATION
+       ===================================================== -->
+
+  <nav
+    class="mobile-navigation"
+    [class.open]="mobileMenuOpen"
+    aria-label="Mobile navigation">
+
+
+    <!-- HOME -->
+
+    <a
+      mat-button
+      routerLink="/home"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="mobile-nav-button"
+      (click)="closeMobileMenu()">
+
+      Home
+
+    </a>
+
+
+    <!-- PRODUCTS -->
+
+    <a
+      mat-button
+      routerLink="/products"
+      routerLinkActive="active"
+      class="mobile-nav-button"
+      (click)="closeMobileMenu()">
+
+      Products
+
+    </a>
+
+
+    <!-- CLIENTS -->
+
+    <a
+      mat-button
+      routerLink="/clients"
+      routerLinkActive="active"
+      class="mobile-nav-button"
+      (click)="closeMobileMenu()">
+
+      Clients
+
+    </a>
+
+
+    <!-- ACHIEVEMENTS -->
+
+    <a
+      mat-button
+      routerLink="/achievements"
+      routerLinkActive="active"
+      class="mobile-nav-button"
+      (click)="closeMobileMenu()">
+
+      Achievements
+
+    </a>
+
+
+    <!-- CAREERS -->
+
+    <a
+      mat-button
+      routerLink="/careers"
+      routerLinkActive="active"
+      class="mobile-nav-button"
+      (click)="closeMobileMenu()">
+
+      Careers
+
+    </a>
+
+
+    <!-- CONTACT -->
+
+    <a
+      mat-button
+      routerLink="/contact"
+      routerLinkActive="active"
+      class="mobile-nav-button"
+      (click)="closeMobileMenu()">
+
+      Contact
+
+    </a>
+
+  </nav>
+
+</header>

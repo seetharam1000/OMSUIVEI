@@ -1,0 +1,668 @@
+/* =========================================================
+   CLIENTS PAGE
+   Global .page and .container are provided by styles.scss
+   ========================================================= */
+
+:host {
+  display: block;
+  width: 100%;
+
+  --purple: #3d1a78;
+  --purple-deep: #2a1054;
+  --green: #4caf50;
+  --muted: #555566;
+  --paper: #f6f5f9;
+  --card: #ffffff;
+  --line: #e7e4f0;
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.clients-page {
+  width: 100%;
+  background: var(--paper);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  width: 100%;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 10px 0 35px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.eyebrow {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--green);
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
+.hero h1 {
+  margin: 10px 0 18px;
+
+  color: var(--purple);
+
+  font-size: 40px;
+
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.hero p {
+  width: 100%;
+
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  color: var(--muted);
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  text-align: justify;
+}
+
+
+/* =========================================================
+   CLIENT SECTION
+   ========================================================= */
+
+.clients-section {
+  width: 100%;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   CLIENT GRID
+   ========================================================= */
+
+.clients-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+
+  margin: 10px 0 40px;
+}
+
+
+/* =========================================================
+   CLIENT CARD
+   ========================================================= */
+
+.client-card {
+  position: relative;
+
+  width: 100%;
+
+  min-width: 0;
+
+  min-height: 250px;
+
+  padding: 28px 26px;
+
+  overflow: hidden;
+
+  background: var(--card);
+
+  border: 1px solid var(--line);
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 16px rgba(61, 26, 120, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+/* =========================================================
+   GREEN LEFT INDICATOR
+   ========================================================= */
+
+.client-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 4px;
+
+  background: var(--green);
+
+  opacity: 0;
+
+  transition: opacity 0.2s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+   ========================================================= */
+
+.client-card:hover {
+  transform: translateY(-4px);
+
+  border-color: transparent;
+
+  box-shadow:
+    0 14px 30px rgba(61, 26, 120, 0.10);
+}
+
+
+.client-card:hover::before {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   RANK
+   ========================================================= */
+
+.rank {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  max-width: 90px;
+
+  padding: 5px 10px;
+
+  color: var(--green);
+
+  background: #e9f7ea;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.location-tag {
+  display: inline-block;
+
+  max-width: calc(100% - 100px);
+
+  margin-bottom: 14px;
+
+  padding: 5px 10px;
+
+  color: var(--purple);
+
+  background: #efe9fb;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  line-height: 1.3;
+
+  text-transform: uppercase;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   COLLEGE NAME
+   ========================================================= */
+
+.client-card h2 {
+  width: 100%;
+
+  margin: 0 0 12px;
+
+  padding-right: 85px;
+
+  color: var(--purple-deep);
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.client-card p {
+  width: 100%;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 16px;
+
+  line-height: 1.75;
+
+  text-align: justify;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1201px) {
+
+  .clients-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 26px;
+  }
+
+  .client-card {
+    padding: 30px 28px;
+  }
+
+  .client-card h2 {
+    font-size: 21px;
+  }
+
+  .client-card p {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .hero {
+    padding-top: 5px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+  .client-card {
+    padding: 25px 22px;
+  }
+
+  .client-card h2 {
+    font-size: 19px;
+
+    padding-right: 75px;
+  }
+
+  .client-card p {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   max-width: 700px
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .hero {
+    max-width: 100%;
+
+    padding: 0 0 25px;
+  }
+
+  .eyebrow {
+    margin-bottom: 8px;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .hero h1 {
+    margin: 8px 0 14px;
+
+    font-size: 30px;
+
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    text-align: justify;
+  }
+
+  .clients-grid {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+
+    margin-top: 5px;
+
+    margin-bottom: 25px;
+  }
+
+  .client-card {
+    min-height: auto;
+
+    padding: 22px 20px;
+
+    border-radius: 9px;
+  }
+
+  .rank {
+    top: 16px;
+    right: 16px;
+
+    max-width: 80px;
+
+    padding: 4px 8px;
+
+    font-size: 11px;
+  }
+
+  .location-tag {
+    max-width: calc(100% - 85px);
+
+    margin-bottom: 11px;
+
+    padding: 4px 8px;
+
+    font-size: 11px;
+
+    letter-spacing: 0.7px;
+  }
+
+  .client-card h2 {
+    margin-bottom: 10px;
+
+    padding-right: 65px;
+
+    font-size: 18px;
+
+    line-height: 1.45;
+  }
+
+  .client-card p {
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    text-align: justify;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   max-width: 450px
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+  .hero {
+    padding-bottom: 22px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+
+    letter-spacing: 1.2px;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .clients-grid {
+    gap: 14px;
+
+    margin-bottom: 20px;
+  }
+
+  .client-card {
+    padding: 20px 18px;
+  }
+
+  .rank {
+    top: 14px;
+    right: 14px;
+
+    padding: 4px 7px;
+
+    font-size: 10px;
+  }
+
+  .location-tag {
+    max-width: calc(100% - 70px);
+
+    font-size: 10px;
+  }
+
+  .client-card h2 {
+    padding-right: 55px;
+
+    font-size: 17px;
+  }
+
+  .client-card p {
+    font-size: 13.5px;
+
+    line-height: 1.7;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   max-width: 360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .hero h1 {
+    font-size: 25px;
+  }
+
+  .hero p {
+    font-size: 13.5px;
+  }
+
+  .client-card {
+    padding: 18px 16px;
+  }
+
+  .rank {
+    top: 13px;
+    right: 13px;
+  }
+
+  .location-tag {
+    max-width: calc(100% - 65px);
+
+    font-size: 9.5px;
+  }
+
+  .client-card h2 {
+    padding-right: 50px;
+
+    font-size: 16px;
+  }
+
+  .client-card p {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+   ========================================================= */
+
+@media (hover: none) {
+
+  .client-card:hover {
+    transform: none;
+
+    border-color: var(--line);
+
+    box-shadow:
+      0 4px 16px rgba(61, 26, 120, 0.04);
+  }
+
+  .client-card:hover::before {
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .client-card,
+  .client-card::before {
+    transition: none;
+  }
+
+  .client-card:hover {
+    transform: none;
+  }
+
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+  .clients-page {
+    background: #ffffff;
+  }
+
+  .client-card {
+    box-shadow: none;
+
+    break-inside: avoid;
+  }
+
+  .client-card::before {
+    display: none;
+  }
+
+}

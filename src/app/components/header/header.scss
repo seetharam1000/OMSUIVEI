@@ -1,0 +1,589 @@
+/* =========================================================
+   HOST
+   ========================================================= */
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+
+/* =========================================================
+   MAIN HEADER
+   ========================================================= */
+
+.main-header {
+  position: relative;
+  z-index: 1000;
+
+  width: 100%;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+
+/* =========================================================
+   HEADER CONTAINER
+   ========================================================= */
+
+.header-container {
+  width: 100%;
+  max-width: 1500px;
+
+  height: 68px;
+
+  margin: 0 auto;
+  padding: 0 35px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo-container {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+
+.vei-logo {
+  width: 115px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+
+  gap: 2px;
+}
+
+
+/* =========================================================
+   NAVIGATION BUTTON
+   ========================================================= */
+
+.nav-button {
+  position: relative;
+
+  height: 68px;
+
+  min-width: auto;
+
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border-radius: 0;
+
+  color: #444444;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+/* =========================================================
+   NAVIGATION HOVER
+   ========================================================= */
+
+.nav-button:hover {
+  color: #198754;
+
+  background: transparent;
+}
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+   ========================================================= */
+
+.nav-button.active {
+  color: #198754;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   ACTIVE UNDERLINE
+   ========================================================= */
+
+.nav-button.active::after {
+  content: '';
+
+  position: absolute;
+
+  left: 16px;
+  right: 16px;
+
+  bottom: 0;
+
+  height: 3px;
+
+  background: #198754;
+
+  border-radius: 3px 3px 0 0;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #333333;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.mobile-menu-button:hover {
+  color: #198754;
+
+  background: #f5f5f5;
+}
+
+
+.mobile-menu-button mat-icon {
+  width: 24px;
+  height: 24px;
+
+  font-size: 24px;
+
+  line-height: 24px;
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+.mobile-navigation {
+  display: none;
+}
+
+
+/* =========================================================
+   ANNOUNCEMENT BAR
+   ========================================================= */
+
+.announcement-bar {
+  min-height: 28px;
+
+  padding: 5px 15px;
+
+  box-sizing: border-box;
+
+  background: #050505;
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  font-size: 10px;
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  text-align: center;
+}
+
+
+.announcement-dot {
+  font-size: 7px;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .header-container {
+    padding: 0 22px;
+  }
+
+
+  .vei-logo {
+    width: 108px;
+  }
+
+
+  .main-navigation {
+    gap: 0;
+  }
+
+
+  .nav-button {
+    padding: 0 11px;
+
+    font-size: 16px;
+  }
+
+
+  .nav-button.active::after {
+    left: 11px;
+    right: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .header-container {
+    height: 64px;
+
+    padding: 0 18px;
+  }
+
+
+  .vei-logo {
+    width: 105px;
+  }
+
+
+  .nav-button {
+    height: 64px;
+
+    padding: 0 8px;
+
+    font-size: 15px;
+  }
+
+
+  .nav-button.active::after {
+    left: 8px;
+    right: 8px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* -------------------------------------------------------
+     HEADER
+     ------------------------------------------------------- */
+
+  .header-container {
+    height: 64px;
+
+    padding: 0 15px;
+  }
+
+
+  /* -------------------------------------------------------
+     LOGO
+     ------------------------------------------------------- */
+
+  .vei-logo {
+    width: 95px;
+  }
+
+
+  /* -------------------------------------------------------
+     HIDE DESKTOP NAVIGATION
+     ------------------------------------------------------- */
+
+  .main-navigation {
+    display: none;
+  }
+
+
+  /* -------------------------------------------------------
+     SHOW MOBILE MENU BUTTON
+     ------------------------------------------------------- */
+
+  .mobile-menu-button {
+    display: flex;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE NAVIGATION
+     ------------------------------------------------------- */
+
+  .mobile-navigation {
+    display: flex;
+
+    width: 100%;
+
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border-top: 1px solid #eeeeee;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+      max-height 0.3s ease,
+      opacity 0.25s ease;
+  }
+
+
+  /* -------------------------------------------------------
+     OPEN MOBILE NAVIGATION
+     ------------------------------------------------------- */
+
+  .mobile-navigation.open {
+    max-height: 420px;
+
+    opacity: 1;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE NAV BUTTON
+     ------------------------------------------------------- */
+
+  .mobile-nav-button {
+    position: relative;
+
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    box-sizing: border-box;
+
+    border-radius: 0;
+
+    border-bottom: 1px solid #f0f0f0;
+
+    color: #444444;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE NAV HOVER
+     ------------------------------------------------------- */
+
+  .mobile-nav-button:hover {
+    color: #198754;
+
+    background: #f8faf9;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE ACTIVE
+     ------------------------------------------------------- */
+
+  .mobile-nav-button.active {
+    color: #198754;
+
+    font-weight: 600;
+
+    background: #f8faf9;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE ACTIVE INDICATOR
+     ------------------------------------------------------- */
+
+  .mobile-nav-button.active::before {
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 3px;
+
+    background: #198754;
+  }
+
+
+  /* -------------------------------------------------------
+     ANNOUNCEMENT BAR
+     ------------------------------------------------------- */
+
+  .announcement-bar {
+    min-height: 30px;
+
+    padding: 5px 12px;
+
+    font-size: 9px;
+  }
+
+
+  .announcement-dot {
+    font-size: 6px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+  .header-container {
+    height: 60px;
+
+    padding: 0 12px;
+  }
+
+
+  .vei-logo {
+    width: 90px;
+  }
+
+
+  .mobile-menu-button {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .mobile-menu-button mat-icon {
+    width: 22px;
+    height: 22px;
+
+    font-size: 22px;
+
+    line-height: 22px;
+  }
+
+
+  .mobile-nav-button {
+    height: 46px;
+
+    padding: 0 18px;
+
+    font-size: 16px;
+  }
+
+
+  .announcement-bar {
+    min-height: 28px;
+
+    padding: 5px 8px;
+
+    font-size: 8px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .header-container {
+    padding: 0 10px;
+  }
+
+
+  .vei-logo {
+    width: 85px;
+  }
+
+
+  .announcement-bar {
+    font-size: 8px;
+  }
+
+}
